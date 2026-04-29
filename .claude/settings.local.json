@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E '\\\\.\\(yml|yaml|xml|properties|conf|json\\)$')",
+      "Bash(./gradlew compileJava)"
+    ]
+  }
+}

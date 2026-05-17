@@ -27,6 +27,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation 'org.springframework.shell:spring-shell-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.slf4j:slf4j-api:2.0.17'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'

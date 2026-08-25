@@ -43,7 +43,7 @@ public record GroqChatRequest(
                         new Message("system", systemPrompt),
                         new Message("user", userPrompt)
                 ),
-                0.2,
+                0.0,
                 SHELL_RESPONSE_FORMAT
         );
     }

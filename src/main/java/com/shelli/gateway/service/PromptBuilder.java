@@ -21,8 +21,14 @@ public class PromptBuilder {
         this.systemPrompt = promptResource.getContentAsString(StandardCharsets.UTF_8);
     }
 
-    public String buildSystemPrompt() {
-        return systemPrompt;
+    public String buildSystemPrompt(String platform, String shell) {
+        return systemPrompt
+                .replace("{platform}", isBlank(platform) ? "unknown" : platform)
+                .replace("{shell}", isBlank(shell) ? "unknown" : shell);
+    }
+
+    private static boolean isBlank(String s) {
+        return s == null || s.isBlank();
     }
 
     public String buildUserPrompt(String naturalLanguageRequest) {

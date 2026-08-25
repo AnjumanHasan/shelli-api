@@ -25,7 +25,7 @@ public class ShellService {
     }
 
     public ShellResponse generate(ShellRequest request) {
-        String systemPrompt = promptBuilder.buildSystemPrompt();
+        String systemPrompt = promptBuilder.buildSystemPrompt(request.platform(), request.shell());
         String userPrompt = promptBuilder.buildUserPrompt(request.prompt());
 
         log.info("Calling LLM with user prompt: {}", userPrompt);

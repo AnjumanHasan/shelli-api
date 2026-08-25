@@ -1,11 +1,9 @@
 package com.shelli.gateway.dto;
 
 /**
-ShellRequest is a record class that represents a request to execute a shell command.
- It contains a single field, prompt, which is a string representing the command to be executed.
- This class is used to encapsulate the data for a shell command request in a structured way, making it easier to handle and process within the application.
-*/
-
-public record ShellRequest(String prompt) {
-
+ * ShellRequest represents an incoming request to translate natural language into a shell command.
+ * platform and shell are optional context fields the client sends so the LLM can target the
+ * caller's environment (e.g. macOS+zsh vs Linux+bash). They are null when unknown.
+ */
+public record ShellRequest(String prompt, String platform, String shell) {
 }
